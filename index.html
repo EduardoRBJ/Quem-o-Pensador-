@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=720, initial-scale=1.0">
+    <title>Quem é o Pensador?</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div id="main-menu" class="screen active" style="background-image: url('images/main-menu.png');">
+        <button class="invisible-button-jogar" id="play-button" style="top: 30%;">Jogar</button>
+        <button class="invisible-button-tutorial" id="tutorial-button" style="top: 45%;">Tutorial</button>
+        <button class="invisible-button-opcoes" id="options-button" style="top: 60%;">Opções</button>
+        <button class="invisible-button-creditos" id="credits-button" style="top: 75%;">Créditos</button>
+    </div>
+
+    <!-- Tutorial Screen -->
+    <div id="tutorial-screen" class="screen" style="background-image: url('images/tutorial.png');">
+        <button class="invisible-button back-button" id="back-to-menu-1">Voltar</button>
+    </div>
+
+    <!-- Options Screen -->
+    <div id="options-screen" class="screen" style="background-image: url('images/options.png');">
+        <button class="invisible-button back-button" id="back-to-menu-2">Voltar</button>
+        <div class="volume-control">
+            <label class="label1" for="music-volume"></label>
+            <input class="ajuste-de-volume" type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        <div class="volume-control">
+            <label class="label1" for="effects-volume"></label>
+            <input class="ajuste-de-volume" type="range" id="effects-volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </div>
+
+    <!-- Credits Screen -->
+    <div id="credits-screen" class="screen" style="background-image: url('images/credits.png');">
+        <button class="invisible-button back-button" id="back-button-credits">Voltar</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="screen" id="quiz-screen">
+        <img id="quiz-image" src="" alt="Quiz Image">
+        <div id="timer">10</div>
+        <div class="botoes">
+            <button class="invisible-button answer-button" id="answer-1">Resposta 1</button>
+            <button class="invisible-button answer-button" id="answer-2">Resposta 2</button>
+            <button class="invisible-button answer-button" id="answer-3">Resposta 3</button>
+            <button class="invisible-button answer-button" id="answer-4">Resposta 4</button>
+        </div>
+        <button class="options-button" id="in-game-options-button"><img class= "engrenagem" width="50" height="50" src="/images/engrenagem.png"></button>
+    </div>
+
+        <!-- Result Screen -->
+    <div id="result-screen" class="screen">
+        <div class="botao-jogardnv">
+            <button class="invisible-button" id="play-again-button"></button>
+            <p id="result-message"></p>
+            <img id="result-image" src="" alt="Resultado" />
+        </div>
+    </div>
+
+
+    <!-- Audio Elements -->
+    <audio id="background-music" loop>
+        <source src="/audio/fundo.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="correct-sound">
+        <source src="/audio/acertar.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong-sound">
+        <source src="/audio/errar.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="victory-sound">
+        <source src="/audio/vitória.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="defeat-sound">
+        <source src="/audio/derrota.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>                                        
